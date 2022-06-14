@@ -1,0 +1,227 @@
+/* Колір основного тексту #757575 */
+/* Колір другорядного тексту #212121  */
+/* Білий текст №FFFFFF */
+/* Акцент #2196F3 */
+/* Контакти rgba(255, 255, 255, 0.6) */
+/* Остновний фон #FFFFFF */
+/* Другорядний фон: #F5F4FA */
+
+/* general ------------ */
+
+:root {
+    --primary-text-color: #757575;
+    --title-text-color: #212121;
+    --accent-color: #2196F3;
+    --alt-text-color: #ffffff; 
+    --primary-white-color: #FFFFFF;
+    --secondary-white-color: #F5F4FA; 
+    --background-color: #2F303A;
+    --black-color: #000000;
+    --accent-button-color: #188CE8;
+}
+
+body {
+    color: var(--primary-text-color);
+    background-color: var(--primary-white-color); 
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+}
+
+.list {
+    list-style: none;
+}
+
+/* -------------------- */
+/* logo --------------- */
+
+.logo {
+    color: var(--accent-color);
+    font-family: Raleway, sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;    
+    text-decoration: none;
+
+}
+
+.logo-up {
+    color: var(--black-color);
+}
+
+.logo-down {
+    color: var(--alt-text-color);
+}
+
+/* --------------------- */
+
+/* site-nav ------------ */
+
+.link {
+color: var(--title-text-color);
+font-weight: 500;
+font-size: 14px;
+line-height: 1.14;
+text-decoration: none;
+letter-spacing: 0.02em;
+}
+
+.contacts {
+    color: var(--primary-text-color);
+
+}
+
+.link:hover, .link:focus {
+color: var(--accent-color);
+}
+
+.site-nav .current {
+    color: var(--accent-color);
+}
+
+/* --------------------- */
+
+/* hero----------------- */
+
+.hero {
+    background-color: var(--background-color);
+}
+
+.hero-title {
+    color: var(--alt-text-color)  ;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.button {
+    background-color: var(--accent-color);
+    color: var(--alt-text-color);
+    border: none;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.9;
+    cursor: pointer;
+    letter-spacing: 0.06em;
+    
+}
+
+.button:hover, button:focus {
+    background-color: var(--accent-button-color);
+}
+
+/* ---------------------- */
+
+/* section--------------- */
+ 
+.section-title, .features-title {
+    color: var(--title-text-color);
+}
+
+.section-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+ 
+}
+
+.features-title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+}
+
+.team {
+    background-color: var(--secondary-white-color);
+}
+
+/* ---------------------- */
+
+/* our team ------------- */
+
+.photo-title {
+    color: var(--title-text-color);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.9;
+    
+}
+
+.position {
+    font-size: 16px;
+    line-height: 1.19;
+}
+
+/* ---------------------- */
+
+/* filters -------------- */
+
+.filter-button {
+    background-color: var(--secondary-white-color);
+    color: var(--title-text-color);
+    border: none;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.63; 
+    cursor: pointer;
+}
+
+.filter-button:hover, .filter-button:focus {
+    background-color: var(--accent-color);
+    color: var(--alt-text-color);
+}
+
+/* ---------------------- */
+
+/* projects ------------- */
+
+.project-title {
+    color: var(--title-text-color);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+}
+
+.project-filter {
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+/* ---------------------- */
+
+/* footer --------------- */
+
+.footer {
+    background-color: var(--background-color);
+}
+
+.address {
+    font-style: normal;
+}
+
+.address p {
+    color:var(--alt-text-color);
+}
+
+.address .link {
+    color: var(--alt-text-color);
+    opacity: 0.6;
+    font-weight: 400;
+    line-height: 1.71;
+}
+
+.address .link:hover, address .link:focus {
+    color: var(--accent-color);
+    opacity: 1;
+
+}
