@@ -327,9 +327,6 @@ img {
     line-height: 1.63; 
 }
 
-.one {
-    margin-left: -8px;
-}
 
 .filter-button:hover, .filter-button:focus {
     background-color: var(--accent-color);
