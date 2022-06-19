@@ -57,8 +57,10 @@ img {
 /* container ---------- */
 
 .container {
+    width: 1200px;
     margin: 0 auto;
-    width: 1170px;
+    padding-left: 15px;
+    padding-right: 15px;
 
     /* outline: 1px solid red; */
 }
@@ -149,7 +151,6 @@ img {
 }
 
 .page-header {
-    /* padding: 24px 0 25px; */
     border-bottom: 1px solid var(--line-color);
 }
 
@@ -158,24 +159,19 @@ img {
     align-items: center;
 }
 
-.portfolio {
-    margin-bottom: 94px;
-}
-
 /* --------------------- */
 
 /* hero----------------- */
 
 .hero {
-  
-
+    padding-top: 200px;
+    padding-bottom: 200px;
     background-color: var(--background-color);
     text-align: center;    
 }
 
 .hero-title {
-    margin: 0 auto 30px;  
-    padding-top: 200px;
+    margin-bottom: 30px;  
 
     color: var(--alt-text-color);
 
@@ -193,7 +189,6 @@ img {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    margin-bottom: 200px;
 
     background-color: var(--accent-color);
     color: var(--alt-text-color);
@@ -223,10 +218,6 @@ img {
 .details {
     padding-bottom: 0;
 }
-
-/* .main-portfolio {
-    margin-top: 94px;
-} */
 
 .section-title, .features-title {
     color: var(--title-text-color);
@@ -261,10 +252,10 @@ img {
     text-transform: uppercase;  
 }
 
-.list {
+.pictures-list, .teammate-list {
     display: flex;
     flex-wrap: wrap;
-        gap: 30px;
+    gap: 30px;
     
 }
 
@@ -275,7 +266,7 @@ img {
 /* our team ------------- */
 
 .photo-title {
-    padding-top: 30px;
+    margin-bottom: 10px;
 
     color: var(--title-text-color);
     
@@ -286,8 +277,6 @@ img {
 }
 
 .position {
-    padding-top: 10px;
-    padding-bottom: 30px;
 
     font-size: 16px;
     line-height: 1.19;
@@ -307,6 +296,10 @@ img {
     background-color: var(--primary-white-color);
 }
 
+.teammate-info {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
 
 /* ---------------------- */
 
@@ -333,13 +326,18 @@ img {
     color: var(--alt-text-color);
 }
 
-.filters {
-    padding-bottom: 50px;
+.filters-list {
+    display: flex;
+    margin-bottom: 50px;
     justify-content: center;
     gap: 8px;
 }
 
-
+.projects-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
 /* ---------------------- */
 
 /* projects ------------- */
@@ -357,8 +355,6 @@ img {
 }
 
 .project-filter {
- 
-
     font-size: 16px;
     line-height: 1.9;
 }
@@ -388,8 +384,6 @@ img {
 }
 
 .address p {
-    margin-bottom: 9px;
-
     color:var(--alt-text-color);
     
 }
@@ -410,5 +404,5 @@ img {
 }
 
 .contacts-bottom {
-    margin-bottom: 9px;
+padding-top: 9px;
 }
