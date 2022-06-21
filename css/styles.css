@@ -22,7 +22,9 @@
     --border-color: #EEEEEE;
     --bg-hero-color: #C4C4C4;
     --ovelray-color: rgba(47, 48, 58, 0.4);
-
+    --social-networks-color: #AFB1B8;
+    --grey-networks-color: rgba(255,255,255,0.1);
+    
 }
 
 body {    
@@ -168,13 +170,13 @@ img {
 .mail::before {
     width: 16px;
     height: 12px;
-    background-image: url('../images/icon-mail.svg');
+    background-image: url('../images/mail.svg');
 }
 
 .tel::before {
     width: 10px;
     height: 16px;
-    background-image: url('../images/icon-tel.svg');
+    background-image: url('../images/tel.svg');
 }
 
 .page-header {
@@ -294,19 +296,19 @@ img {
 }
 
 .icon-antenna::before {
-    background-image: url('../images/icon-antenna.svg');   
+    background-image: url('../images/antenna.svg');   
 }
 
 .icon-clock::before {
-    background-image: url('../images/icon-clock.svg');
+    background-image: url('../images/clock.svg');
 }
 
 .icon-diagram::before {
-    background-image: url('../images/icon-diagram.svg');
+    background-image: url('../images/diagram.svg');
 }
 
 .icon-astronaut::before {
-    background-image: url('../images/icon-astronaut.svg');
+    background-image: url('../images/astronaut.svg');
 }
 
 .features-title {
@@ -369,64 +371,91 @@ margin-bottom: 16px;
 .teammate-info {
     padding-top: 30px;
     padding-bottom: 30px;
+    padding-left: 32px;
+    padding-right: 32px;
 }
 
-/* ?????????????????????????????????????????????? */
+/* social networks --------- */
 
-.social-links {
-    outline: 1px solid red;
+.networks {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     gap: 10px;
+ 
 }
 
-.social-link-item > a {
-    display: block;
-    /* outline: 1px solid #188CE8; */
+.network-links {
+    display: flex;
     width: 44px;
     height: 44px;
     border-radius: 50%;
+    background-color: var(--primary-white-color);
+
 }
 
-.social-link-item > a:hover, .social-link-item>a:focus {
+.network-icon {
+    margin: auto;
+    width: 22px;
+    height: 22px; 
+    fill: var(--social-networks-color);
+}
+
+.social-networks .network-links {
+    background-color: var(--grey-networks-color);
+}
+
+.social-networks .network-icon {
+    fill: var(--primary-white-color);
+}
+
+.network-links:hover, .network-links:focus {
     background-color: var(--accent-color);
 }
 
-.instagram {
-    background-image: url(../images/icon-instagram.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-
+.network-links:hover,
+.network-links:focus {
+    background-color: var(--accent-color);
 }
 
-.twitter {
-    background-image: url(../images/icon-facebook.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-
+.network-links:hover .network-icon, 
+.network-links:focus .network-icon {
+    fill: var(--primary-white-color);
 }
-
-.facebook {
-    background-image: url(../images/icon-facebook.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-
-}
-
-.linkedin {
-    background-image: url(../images/icon-linkedin.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-
-}
-
-.instagram:hover, .instagram:focus {
-    
-}
-
 
 /* ---------------------- */
+
+/* Regular Customers */
+
+.customers {
+    display: flex;
+    gap: 30px;
+}
+
+.customer-link {
+    display: flex;
+    width: 170px;
+    height: 92px;
+    border: 1px solid var(--social-networks-color);
+    border-radius: 4px;
+
+}
+
+.customer-icon {
+    margin: auto;
+    width: 106px;
+    height: 60px;
+    fill: var(--social-networks-color);
+}
+
+.customer-link:hover,
+.customer-link:focus {
+    border-color: var(--accent-color);
+
+}
+
+.customer-link:hover .customer-icon, 
+.customer-link:focus .customer-icon {
+    fill: var(--accent-color);
+}
 
 /* filters -------------- */
 
@@ -561,20 +590,3 @@ margin-bottom: 16px;
     line-height: 1.14;
     text-transform: uppercase;
 }
-/* 
-.network-icons {
-    display: flex;
- 
-}
-
-.network-icon {
-    display: inline-block;
-    /* margin-right: 10px; 
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    color: white;
-
-    outline: 1px solid red;
-    
-} */
