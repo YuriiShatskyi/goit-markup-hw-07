@@ -188,6 +188,39 @@ img {
     align-items: center;
 }
 
+.nav-right {
+    margin-left: auto;
+}
+
+.new-list {
+    display: flex;
+    gap: 30px;
+    justify-content: flex-end;
+}
+
+.new-icon {
+    width: 16px;
+    height: 16px;
+    fill: var(--primary-text-color);
+}
+
+.new-link {
+    display: flex;
+    align-items: center; 
+    gap: 10px;
+    text-decoration: none;
+    color: var(--primary-text-color);
+}
+
+.new-link:hover,
+.new-link:focus {
+    color: var(--accent-color);
+}
+
+.new-link:hover .new-icon,
+.new-link:focus .new-icon {
+    fill: var(--accent-color);
+}
 /* --------------------- */
 
 /* hero----------------- */
