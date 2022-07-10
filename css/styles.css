@@ -32,7 +32,7 @@
     --line-grey-color: rgba(255, 255, 255, 0.3);
     --field-border-color: rgba(33, 33, 33, 0.2);
     --comment-text-color: rgba(117, 117, 117, 0.5);
-   
+    --email-grey-color: rgba(255, 255, 255, 0.6);
     
 }
 
@@ -47,7 +47,7 @@ body {
     letter-spacing: 0.03em;
 }
 
-h1, h2, h3, h4, h5, h6, p, ul {
+h1, h2, h3, h4, h5, h6, p, ul, label, input, textarea {
     margin: 0;
     padding: 0;
 }
@@ -350,12 +350,11 @@ img {
     fill: var(--accent-color);
 }
  
-
 .modal-form {
-    padding-top: 40px;
+    /* padding-top: 40px;
     padding-left: 40px;
-    padding-right: 40px;
-   
+    padding-right: 40px; */
+    padding: 40px;  
 }
 
 .modal-title {
@@ -370,9 +369,43 @@ img {
     color: var(--title-text-color);
 }
 
-.field-title {
-    /* margin-top: 10px; */
+.field-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
     
+}
+
+.field-icon {
+    position: absolute;
+    left: 12px;
+    bottom: 11px;
+    z-index: 2;
+    cursor: pointer;
+
+    width: 18px;
+    height: 18px;   
+    fill: var(--title-text-color);
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-field:hover,
+.form-field:focus {
+    border-color: var(--accent-color);
+}
+
+.form-field:focus + .field-icon {
+    fill: var(--accent-color);
+
+}
+
+.field-box:hover .field-icon {
+    fill: var(--accent-color);
+}
+
+.field-title {
     margin-bottom: 4px;
 
     font-weight: 400;
@@ -384,29 +417,36 @@ img {
 }
 
 .form-field {
-    display: block;
-
-    width: 100%;
+    display: flex;
     height: 40px;
-    padding: 0 0 0 42px;
-    margin: 0;
-    /* margin-bottom: 10px; */
+    padding: 1px 1px 1px 42px;
 
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.67;
+    letter-spacing: 0.01em;
+    color: var(--title-text-color);
     border: 1px solid var(--field-border-color);
     border-radius: 4px;
+    outline: transparent;
 
     cursor: pointer;
 
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-field:hover, 
-.form-field:focus {
-    border-color: var(--accent-color);
+textarea {
+    padding: 0;
+    margin: 0;
 }
 
+.comment-box textarea::placeholder {
+    color: var(--comment-text-color);
+}
+
+
 .form-comment {
-    width: 448px;
+    width: 100%;
     height: 120px;
     padding: 12px 16px;
     margin-bottom: 20px;
@@ -416,52 +456,31 @@ img {
     line-height: 1.67;
     letter-spacing: 0.01em;
     
-    /* color: var(--comment-text-color); */
-    color: var(--primary-text-color);
+    color: var(--title-text-color);
 
     resize: none;
 }
+/* 
+.checkbox {
+    appearance: none;
+    position: absolute;
+} */
 
-.form-agreement {
-    margin-left: 12px;
+.agreement {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
     margin-bottom: 30px;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
 }
 
 .agreement-link {
     color: var(--accent-color);
-}
-
-.field-box {
-    position: relative;
-/* background-color: red; */
-margin: 0;
-
-}
-
-label {
-    padding: 0;
-    /* background-color: yellow; */
-    margin: 0;
-}
-
-.field-icon {
-    position: absolute;
-    left: 12px;
-    bottom: 11px;
-    z-index: 2;
-    cursor: pointer;
-
-    width: 18px;
-    height: 18px;
-    fill: var(--title-text-color); 
-
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-
-.field-box:hover .field-icon,
-.field-box:focus .field-icon {
-    fill: var(--accent-color);
 }
 
 .form-button {
@@ -922,6 +941,10 @@ label {
     background-color: var(--background-color);
 
     color: var(--primary-white-color);    
+}
+
+.subscribe-box input::placeholder {
+    color: var(--email-grey-color)
 }
 
 .subscribe-button {

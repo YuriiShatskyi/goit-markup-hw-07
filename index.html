@@ -66,44 +66,50 @@
               <use href="./images/icons.svg#icon-cross" width="11"></use>
             </svg>
           </button>
-          <form class="modal-form" name="modal-form">
+          <form class="modal-form" name="modal-form" autocomplete="on">
             <h1 class="modal-title">Оставьте свои данные, мы вам перезвоним</h1>
-            <label class="field-title">
-              Имя
-              <div class="field-box">
-                <svg class="field-icon human">
-                  <use href="./images/icons.svg#icon-human" width="18"></use>
-                </svg>
-                <input class="form-field" type="text" name="user-name" />
-              </div>
-            </label>
-            <label class="field-title">
-              Телефон
-              <div class="field-box">
-                <input class="form-field" type="tel" name="user-phone" />
-                <svg class="field-icon phone">
-                  <use href="./images/icons.svg#icon-phone" width="18"></use>
-                </svg>
-              </div>
-            </label>
-            <label class="field-title">
-              Почта
-              <div class="field-box">
-                <svg class="field-icon letter">
-                  <use href="./images/icons.svg#icon-letter" width="18"></use>
-                </svg>
-                <input class="form-field" type="email" name="user-email" />
-              </div>
-            </label>
-            <label class="field-title">
-              Комментарий
-              <textarea class="form-field form-comment" placeholder="Введите текст"></textarea>
-            </label>
-            <label>
-              <input class="form-agreement" type="checkbox" />
-              Соглашаюсь с рассылкой и принимаю
-              <a class="agreement-link" href="">Условия договора</a>
-            </label>
+
+            <div class="field-box">
+              <label class="field-title" for="name" required> Имя</label>
+              <input class="form-field" type="text" name="user-name" id="name" autofocus />
+              <svg class="field-icon human">
+                <use href="./images/icons.svg#icon-human" width="18"></use>
+              </svg>
+            </div>
+
+            <div class="field-box">
+              <label class="field-title" for="phone" required> Телефон</label>
+              <input class="form-field" type="tel" name="user-phone" id="phone" />
+              <svg class="field-icon phone">
+                <use href="./images/icons.svg#icon-phone" width="18"></use>
+              </svg>
+            </div>
+
+            <div class="field-box">
+              <label class="field-title" for="email" required> Почта</label>
+              <input class="form-field" type="email" name="user-email" id="email" />
+              <svg class="field-icon letter">
+                <use href="./images/icons.svg#icon-letter" width="18"></use>
+              </svg>
+            </div>
+            <div class="comment-box">
+              <label class="field-title" for="comment" required> Комментарий</label>
+              <textarea
+                class="form-field form-comment"
+                placeholder="Введите текст"
+                id="comment"
+              ></textarea>
+            </div>
+
+            <div class="agreement">
+              
+                <input class="checkbox" type="checkbox" name="agreement" required/>
+                <label class="agreement-text" for="agreement"></label>
+                Соглашаюсь с рассылкой и принимаю
+                <a class="agreement-link" href="">Условия договора</a>
+              </label>
+            </div>
+
             <button class="button form-button" type="submit" width="200">Отправить</button>
           </form>
         </div>
@@ -484,5 +490,14 @@
       </div>
     </footer>
     <script src="./js/modal.js"></script>
+    <script>
+      (() => {
+        document.querySelector('.js-speaker-form').addEventListener('submit', e => {
+          e.preventDefault();
+
+          new FormData(e.currentTarget).forEach((value, name) => console.log(`${name}: ${value}`));
+        });
+      })();
+    </script>
   </body>
 </html>
