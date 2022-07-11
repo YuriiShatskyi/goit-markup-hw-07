@@ -67,9 +67,56 @@
             </svg>
           </button>
           <form class="modal-form" name="modal-form" autocomplete="on">
-            <h1 class="modal-title">Оставьте свои данные, мы вам перезвоним</h1>
+            <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
 
-            <div class="field-box">
+            <label class="new-field-box">
+              <span class="new-field-title">Имя</span>
+              <div class="new-icon-box">
+                <input
+                  class="new-field"
+                  type="text"
+                  name="user-name"
+                  id="user-name"
+                  autofocus
+                  required
+                />
+                <svg class="new-field-icon">
+                  <use href="./images/icons.svg#icon-human" width="18"></use>
+                </svg>
+              </div>
+            </label>
+
+            <label class="new-field-box">
+              <span class="new-field-title">Телефон</span>
+              <div class="new-icon-box">
+                <input class="new-field" type="tel" name="user-phone" id="user-phone" required />
+                <svg class="new-field-icon">
+                  <use href="./images/icons.svg#icon-phone" width="18"></use>
+                </svg>
+              </div>
+            </label>
+
+            <label class="new-field-box">
+              <span class="new-field-title">Почта</span>
+              <div class="new-icon-box">
+                <input class="new-field" type="email" name="user-email" id="user-email" required />
+                <svg class="new-field-icon">
+                  <use href="./images/icons.svg#icon-letter" width="18"></use>
+                </svg>
+              </div>
+            </label>
+
+            <label class="">
+              <span class="new-field-title"> Комментарий </span>
+              <textarea
+                class="new-field comment"
+                placeholder="Введите текст"
+                id="comment"
+                required
+              ></textarea>
+            </label>
+
+            <!-- <div class="field-box">
               <label class="field-title" for="name"> Имя</label>
               <div class="field-pic-box">
                 <input
@@ -113,7 +160,7 @@
                 id="comment"
                 required
               ></textarea>
-            </div>
+            </div> -->
 
             <label class="agreement">
               <input class="checkbox" type="checkbox" name="agreement" id="agreement" />
@@ -123,16 +170,6 @@
                 <a class="agreement-link" href="">Условия договора</a></span
               >
             </label>
-
-            <!-- <input class="checkbox" type="checkbox" name="agreement" id="agreement" required /> -->
-            <!-- <svg class="checkbox-pic">
-                <use href="./images/icons.svg#icon-check-empty" width="16" height="15"></use>
-              </svg> -->
-            <!-- <span class="checkbox-icon"></span>
-              <label class="agreement-text" for="agreement">
-                Соглашаюсь с рассылкой и принимаю
-                <a class="agreement-link" href="">Условия договора</a>
-              </label> -->
 
             <button class="button form-button" type="submit" width="200">Отправить</button>
           </form>
