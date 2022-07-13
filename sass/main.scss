@@ -1,5 +1,5 @@
-$color: yellow;
+@import "./utils/variables";
+@import "./base/normalize";
+@import "./utils/placeholders";
+@import "./utils/components/page-header";
 
-body {
-    background-color: $color;
-}
