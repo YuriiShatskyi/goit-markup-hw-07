@@ -399,7 +399,7 @@ ul {
   height: 600px;
   text-align: center;
   background-color: #C4C4C4;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/hero-main.jpg");
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/hero.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -603,7 +603,7 @@ ul {
   display: inline-block;
   width: 16px;
   height: 15px;
-  background-image: url("../../images/check-empty.svg");
+  background-image: url("../../images/checkbox.svg");
   border-radius: 2px;
   background-repeat: no-repeat;
   background-position: center;
@@ -611,7 +611,7 @@ ul {
 }
 .form__checkbox:checked + .form__checkdraw {
   background-color: #2196F3;
-  background-image: url("../../images/check-full.svg");
+  background-image: url("../../images/checkdraw.svg");
 }
 
 .features {
