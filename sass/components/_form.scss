@@ -145,7 +145,7 @@
     width: 16px;
     height: 15px;
 
-    background-image: url('../../images/checkbox.svg');
+    background-image: url('./../images/checkbox.svg');
     border-radius: 2px;
     background-repeat: no-repeat;
     background-position: center;
@@ -155,7 +155,7 @@
 
 .form__checkbox:checked + & {
     background-color: $accent-color;
-    background-image: url('../../images/checkdraw.svg');
+    background-image: url('./../images/checkdraw.svg');
     }
 }
 
